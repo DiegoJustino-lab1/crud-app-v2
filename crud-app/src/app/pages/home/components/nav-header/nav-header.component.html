@@ -1,0 +1,46 @@
+<section class="vh-100 gradient-custom">
+    <div class="container py-5 vh-100">
+      <div class="row d-flex justify-content-center align-items-center vh-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card bg-dark text-white" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+  
+              <div class="mb-md-5 mt-md-4 pb-5">
+
+                
+              <h2 class="fw-bold mb-2 text-uppercase">Criação de Novo Usuário</h2>
+              <p class="text-white-50 mb-5">Por favor, entre com suas informações!</p>
+
+
+    <div [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <label>Nome:<br>
+            <input type="text" formControlName="name" placeholder="Completo"> <br>
+          </label>
+  <br>
+    <label>
+     E-mail:<br>
+      <input type="email" formControlName="email" placeholder="E-mail corporativo"><br>
+    </label>
+  <br>
+    <label>
+      Função:<br>
+      <select formControlName="role">
+        <option *ngFor="let role of roles" [value]="role">{{role}}</option>
+      </select>
+    </label>
+  <br>
+    <label>
+      Senha:<br>
+      <input type="password" formControlName="password">
+    </label>
+    <br>
+    <br>
+    <button type="submit" [disabled]="!userForm.valid">Salvar</button>
+</div>
+</div>
+</div>
+</div>
+    </div>
+    </div>
+    </div>
+</section>
