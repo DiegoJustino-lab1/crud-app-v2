@@ -1,16 +1,31 @@
+<section class="vh-100 gradient-custom">
+  <div class="container py-5 vh-100">
+    <div class="row d-flex justify-content-center align-items-center vh-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-dark text-white" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+
+            <div class="mb-md-5 mt-md-4 pb-5">
+
 <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
     <div>
       <label for="name">Nome:</label>
+      <br>
       <input id="name" type="text" formControlName="name" required>
+      <br>
     </div>
   
     <div>
+    
       <label for="email">E-mail:</label>
+      <br>
       <input id="email" type="email" formControlName="email" required>
+      <br>
     </div>
   
     <div>
       <label for="role">Função:</label>
+      <br>
       <select id="role" formControlName="role">
         <option value="Engenheiro de FE">Engenheiro de FE</option>
         <option value="Engenheiro de BE">Engenheiro de BE</option>
@@ -20,9 +35,26 @@
     </div>
   
     <div>
+    
       <label for="password">Senha:</label>
+      <br>
       <input id="password" type="password" formControlName="password" required minlength="6" maxlength="15">
+      
     </div>
-  
+  <br>
     <button type="submit" [disabled]="!userForm.valid">Salvar</button>
+    <br>
   </form>
+  <a routerLink="/users">Ir para a página de usuários</a>
+<br>
+<a routerLink="/add-user">Adicionar um Usuário</a>
+<br>
+<a routerLink="/home">Home</a>
+
+</div>
+</div>
+</div>
+    </div>
+    </div>
+    </div>
+</section>
