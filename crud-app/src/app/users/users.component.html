@@ -1,0 +1,19 @@
+<!-- users.component.html -->
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>E-mail</th>
+    <th>Função</th>
+    <th>Ações</th>
+  </tr>
+  <tr *ngFor="let user of users; index as i">
+    <td>{{ user.name }}</td>
+    <td>{{ user.email }}</td>
+    <td>{{ user.role }}</td>
+    <td>
+      <button (click)="editUser(i)">Editar</button>
+      <button (click)="deleteUser(i)">Excluir</button>
+    </td>
+  </tr>
+</table>
+<button (click)="newUser()">Novo usuário</button>

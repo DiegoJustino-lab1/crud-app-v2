@@ -1,18 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AddUserComponent } from './pages/adduser/adduser.component';
+import { EditUserComponent } from './pages/edituser/edituser.component';
+import { NavHeaderComponent } from './pages/home/components/nav-header/nav-header.component';
+import { NavbarComponent } from './pages/home/components/navbar/navbar.component';
+import { UsersComponent } from './pages/home/components/users/users.component';
+import { WelcomeComponent } from './pages/home/components/welcome/welcome.component';
+import { HomeComponent } from './pages/home/home.component';
+import { TodoListComponent } from './pages/home/pages/todo-list/todo-list.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
-import { HomeComponent } from './pages/home/home.component';
-import { NavbarComponent } from './pages/home/components/navbar/navbar.component';
-import { RouterModule } from '@angular/router';
-import { UsersComponent } from './pages/home/components/users/users.component';
-import { AppRoutingModule } from './app-routing.module';
-import { WelcomeComponent } from './pages/home/components/welcome/welcome.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { TodoListComponent } from './pages/home/pages/todo-list/todo-list.component';
-import { NavHeaderComponent } from './pages/home/components/nav-header/nav-header.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { NavHeaderComponent } from './pages/home/components/nav-header/nav-heade
     UsersComponent,
     WelcomeComponent,
     TodoListComponent,
-    NavHeaderComponent
+    NavHeaderComponent,
+    AddUserComponent,
+    EditUserComponent, // Descomente esta linha
   ],
   imports: [
     BrowserModule,

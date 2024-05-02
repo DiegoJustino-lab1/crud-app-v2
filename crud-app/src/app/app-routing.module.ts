@@ -7,10 +7,15 @@ import { WelcomeComponent } from './pages/home/components/welcome/welcome.compon
 import { TodoListComponent } from './pages/home/pages/todo-list/todo-list.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { NavHeaderComponent } from './pages/home/components/nav-header/nav-header.component';
+import { AddUserComponent } from './pages/adduser/adduser.component';
+import { EditUserComponent } from './pages/edituser/edituser.component';
+
 const routes: Routes = [
   {path: "", redirectTo: "/login", pathMatch: 'full'},
   {path: "login", component: LoginComponent},
   {path: "signup", component: SignupComponent},
+  {path: "add-user", component: AddUserComponent},
+  {path: "edit-user", component: EditUserComponent},
   { path: 'nav-header', component: NavHeaderComponent },  {
     path: "app", component: HomeComponent,
     children: [

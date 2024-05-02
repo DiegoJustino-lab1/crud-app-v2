@@ -1,0 +1,21 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <label>Nome:<br>
+    <input type="text" formControlName="name" required>
+  </label>
+  <br>
+  <label>E-mail:<br>
+    <input type="email" formControlName="email" required>
+  </label>
+  <br>
+  <label>Função:<br>
+    <select formControlName="role" required>
+      <option *ngFor="let role of roles" [value]="role">{{role}}</option>
+    </select>
+  </label>
+  <br>
+  <label>Senha:<br>
+    <input type="password" formControlName="password" required minlength="6" maxlength="15">
+  </label>
+  <br>
+  <button type="submit" [disabled]="!userForm.valid">Salvar</button>
+</form>
