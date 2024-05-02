@@ -13,9 +13,11 @@ import { EditUserComponent } from './pages/edituser/edituser.component';
 const routes: Routes = [
   {path: "", redirectTo: "/login", pathMatch: 'full'},
   {path: "login", component: LoginComponent},
+  {path:"home", component: HomeComponent},
   {path: "signup", component: SignupComponent},
   {path: "add-user", component: AddUserComponent},
   {path: "edit-user", component: EditUserComponent},
+  {path: "app", component: HomeComponent},
   { path: 'nav-header', component: NavHeaderComponent },  {
     path: "app", component: HomeComponent,
     children: [

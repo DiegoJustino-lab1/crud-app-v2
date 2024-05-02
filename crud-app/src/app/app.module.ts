@@ -28,6 +28,7 @@ import { SignupComponent } from './pages/signup/signup.component';
     TodoListComponent,
     NavHeaderComponent,
     AddUserComponent,
+    HomeComponent,
     EditUserComponent, // Descomente esta linha
   ],
   imports: [
